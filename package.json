@@ -1,0 +1,29 @@
+{
+  "name": "feel-perfect",
+  "version": "1.0.0",
+  "description": "Feel perfect page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studnik18/feel-perfect.git"
+  },
+  "keywords": [
+    "Salon",
+    "masażu",
+    "Warszawa"
+  ],
+  "author": "Maciej Studniarz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studnik18/feel-perfect/issues"
+  },
+  "homepage": "https://github.com/studnik18/feel-perfect#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
