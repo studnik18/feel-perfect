@@ -5,11 +5,14 @@
   <meta charset="utf-8">
   <title>Masaże Feel Perfect</title>
   <meta content="Salon Masażu Feel Perfect" property="og:title">
-  <meta content="Masaże: szwedzki, relaksacyjny, sportowy, antycellulitowy, drenaż limfatyczny, wspomagający odchudzanie, gorącymi kamieniami" property="og:description">
+  <meta content="Piotr Wiśniewski Masaże: szwedzki, relaksacyjny, sportowy, antycellulitowy, drenaż limfatyczny, wspomagający odchudzanie, gorącymi kamieniami" property="og:description">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link rel="stylesheet" type="text/css" href="css/minireset.min.css" >
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
   <body>
   <div id="fb-root"></div>
@@ -22,28 +25,256 @@
   }(document, 'script', 'facebook-jssdk'));</script>
   <div id="main">
     <ul class="navbar">
-      <li><a href="#o-mnie">O mnie</a></li>
-      <li><a href="#oferta">Oferta</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
+      <li class="logo-box">
+        <img 
+          class="logo"
+          srcset="img/logo-m.jpg 1800w,
+                  img/logo-l.jpg 800w"
+          alt="Feel perfect logo">
+      </li>
+      <li data-active="false" class="menu-item"><a href="#o-mnie">O mnie</a></li>
+      <li data-active="false" class="menu-item"><a href="#oferta">Oferta</a></li>
+      <li data-active="false" class="menu-item"><a href="#kontakt">Kontakt</a></li>
     </ul>
-    <div id="o-mnie">
-      <img 
-        srcset="img/2-l.jpg 1800w,
-                img/2-s.jpg 800w"
-
-        alt="">
-      <p class="about-me">Witam Cię serdecznie w Feel Perfect.<br>
+    <div id="o-mnie" class="tab-content about-me">
+      <div class="about-me-slider">
+        <img src="img/1.jpg" alt="" class="about-me-photo">
+        <img src="img/2.jpg" alt="" class="about-me-photo">
+        <img src="img/3.jpg" alt="" class="about-me-photo">
+        <img src="img/4.jpg" alt="" class="about-me-photo">
+      </div>
+      <p class="about-me-paragraph">Witam Cię serdecznie w Feel Perfect.<br>
       Nazywam się Piotr i jestem dyplomowanym technikiem masażystą.<br>
       Masaż był najpierw moim zainteresowaniem, a następnie stał się pasją i sposobem na życie. Moja przygoda z masażem rozpoczęła się ponad 3 lata temu. Przez ten czas miałem okazję doskonalić swój zawód w klinice ortopedycznej Carolina Medical Center, warszawskich salonach SPA, oraz podczas wielu maratonów. Zdobyte doświadczenie, wskazówki oraz porady wykorzystuję do dziś i cały czas poszerzam swoje umiejętności.<br>
       Dobrze wiem, jak stres, praca siedząca lub intensywne treningi na siłowni mogą wpłynąć na nasze samopoczucie fizyczne i psychiczne, a także, napięcie mięśni. Na własnej skórze przekonałem się jak wiele może zdziałać w tych sytuacjach masaż. Każda osoba wychodząca po zabiegu z lepszym samopoczuciem utwierdza mnie w przekonaniu, że właśnie tym powinienem się zajmować.<br>
       Zainteresowałem Cię tym co robię? Zapraszam na masaż.</p>
     </div>
-    <div id="oferta">
-      <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+    <div id="oferta" class="tab-content offer">
+      <ul>
+        <li class="offer-item">
+          <img src="img/offer/klasyczny.jpg" alt="klasyczny" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż klasyczny</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>100zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+            <p class="offer-description">
+              Masaż klasyczny to najpopularniejszy zabieg. W zależności od zastosowanej techniki, może on mieć różne działanie: wyciszające, pobudzające, przeciwbólowe, regenerujące, lecznicze, a nawet odchudzające.
+            </p>
+          </div>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/relaksacyjny.jpg" alt="relaksacyjny" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż relaksacyjny</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>80zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+            <p class="offer-description">
+              Powolny masaż wykonywany w celu zniesienia napięcia mięśniowego oraz psychicznego. Wykonywany najczęściej z użyciem ciepłego olejku, aromaterapii przy muzyce relaksacyjnej.
+            </p>
+          </div>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/kamienie.jpg" alt="kamienie" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż gorącymi kamieniami</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>150zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>90 min.</p>
+            </div>
+            <p class="offer-description">
+              Masaż ten wykonywany jest przy pomocy gładkich, czarnych, bazaltowych kamieni, ogrzewanych przed zabiegiem do temperatury około 50 stopni. Działa głęboko relaksująco, odprężająco i przeciwbólowo.
+            </p>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/sportowy.jpg" alt="sportowy" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż sportowy</p>
+            <div class="offer-details"> 
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>120zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+          <p class="offer-description">
+            Masaż indywidualnie dostosowany do wykonywanej dyscypliny sportowej. Dzieli się na masaż: przed treningowy, powysiłkowy, izometryczny. Pomaga osiągać lepsze wyniki w sporcie i szybszą regeneracje.
+          </p>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/aroma.jpg" alt="aromatyczny" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż Aromaterapeutyczny</p>
+            <div class="offer-details"> 
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>100zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+          <p class="offer-description">
+            Masaż przy użyciu naturalnych olejków eterycznych. W zależności od zamierzonego efektu olejki mogą mieć charakter pobudzający, rozluźniający, wyciszający, przeciwbólowy oraz leczniczy.
+          </p>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/antycellulit.jpg" alt="antycellulitowy" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż bańką chińską / Antycellulitowy</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>140zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+            <p class="offer-description">
+              Skuteczny masaż niwelujący uporczywy cellulit. Regularnie i systematycznie wykonywane masaże antycellulitowe, świetnie poprawiają ukrwienie skóry, sprawiają, że staje się jędrna i elastyczna.
+            </p>
+          </div>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/dla_par.jpg" alt="dla par" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż dla par</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>200zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+          <p class="offer-description">
+            Masaż dla par specjalnie dobrany do państwa potrzeb. Zabierz ukochaną osobę, przyjaciela lub zrób znajomym miły prezent :)
+          </p>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/4_rece.jpg" alt="na 4 ręce" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż na 4 ręce</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>200zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+          <p class="offer-description">
+            Zabieg wykonywany przez dwójkę masażystów wykonujących te same techniki. Masaż na działanie relaksacyjne, odprężające, lecznicze.
+          </p>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/bambusy.jpg" alt="z bambusami" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż bambusami</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>100zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+            <p class="offer-description">
+              Masaż bambusem jest masażem pobudzającym tkanki głębokie. Wykonywany za pomocą specjalnych kijków bambusowych, działa relaksacyjne oraz leczniczo.
+            </p>
+          </div>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/drenaz_limf.jpg" alt="drenaż limfatyczny" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Drenaż limfatyczny</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>100zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+            <p class="offer-description">
+              Masaż w którym poprzez zastosowanie odpowiednich technik umożliwia się usprawnienie krążenia limfy i płynów tkankowych. Umożliwia to zapobieganie i leczenie chorób związanych z zastojem limfy.
+            </p>
+          </div>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/leczniczy.jpg" alt="leczniczy" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż leczniczy</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>100zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>60 min.</p>
+            </div>
+            <p class="offer-description">
+              Masaż indywidualnie dobrany do danej jednostki chorobowej. Usprawnia procesy naprawcze organizmu, przyspiesza regenerację oraz niweluje dolegliwości bólowe.
+            </p>
+          </div>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/powieziowy.jpg" alt="powięziowy" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Masaż powięziowy</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>60zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>40 min.</p>
+            </div>
+            <p class="offer-description">
+              Masaż, który rozluźnienie, wydłużenie i zlikwidowanie zrostów oraz nieprawidłowych wzorców ruchowych znosi ból i przywraca prawidłowy zakres ruchu.
+            </p>
+          </div>
+        </li>
+        <li class="offer-item">
+          <img src="img/offer/refleksologia.jpg" alt="refleksologia stóp" class="massage-photo">
+          <div class="offer-info">
+            <p class="offer-title">Refleksologia stóp</p>
+            <div class="offer-details">
+              <img src="img/money-stack.svg" alt="money icon">
+              <p>60zł</p>
+              <img src="img/alarm-clock.svg" alt="clock img">
+              <p>40 min.</p>
+            </div>
+            <p class="offer-description">
+              Refleksologia to specjalne wykorzystanie technik uciskowych (punktowych) uwalniające przepływ energii w organizmie. Stymulując odpowiednie punkty uciskami można uwolnić zablokowane kanały energetyczne.
+            </p>
+          </div>
+        </li>
+      </ul>        
     </div>
-    <div id="kontakt">
-      <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-      <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+    <div id="kontakt" class="tab-content contact">
+<!--       <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:EipTdGVmYW5hIEJyecWCeSAxMCwgMDItNjg1IFdhcnN6YXdhLCBQb2xza2EiMBIuChQKEglj_ytd1zIZRxHQ5CMKWTfQDRAKKhQKEgk1RNHn2TIZRxFgfVQyek_MDQ&key=AIzaSyAMvKcCjFr_ucqEVs-vbh_C2E01bcTRd7U" allowfullscreen></iframe> -->
+      <p class="contact-paragraph">Skontaktuj się ze mną</p>
+      <img class="contact-photo" src="img/contact-photo.jpg" alt="Piotr Wiśniewski">
+      <p class="contact-paragraph">Piotr Wiśniewski</p>
+      <div class="contact-icons-container">
+        <a class="contact-link" href="tel:500 120 478">
+          <img class="contact-icon" src="/img/phone.svg" alt="phone icon">
+          <p>+48 500 120 478</p>
+        </a>
+        <a class="contact-link" href="mailto:masaze.feelperfect@gmail.com">
+          <img class="contact-icon" src="/img/envelope.svg" alt="mail icon">
+          <p>masaze.feelperfect@gmail.com</p>
+        </a>
+        <a class="contact-link" href="https://m.me/FeelPerfectMasaze" target="_blank">
+          <img class="contact-icon" src="/img/messenger_icon.svg" alt="messenger icon">
+          <p>Wyślij wiadomość przez Messenger</p>
+        </a>
+      </div>
+      <p class="contact-paragraph">Znajdź mnie na Social Media i sprawdź promocje na Grouponie</p>
+      <div class="social-icons-container">
+        <a href="https://www.facebook.com/FeelPerfectMasaze/" target="_blank">
+          <img class="contact-icon" src="/img/facebook-icon.svg" alt="fb icon">
+        </a>
+        <a href="https://www.instagram.com/masaze_feelperfect/?hl=pl" target="_blank">
+          <img class="contact-icon" src="/img/instagram-icon.svg" alt="instagram icon">
+        </a>
+        <a href="https://www.groupon.pl/deals/feel-perfect-masaze-massage4health" target="_blank">
+          <img class="contact-icon" src="/img/groupon-icon.svg" alt="groupon icon">
+        </a>
+      </div>
+
     </div>
   </div>
   <footer>
@@ -54,6 +285,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

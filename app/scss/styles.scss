@@ -1,3 +1,27 @@
+
+$color-1: #f3f3f3;
+$color-2: #cccccc;
+$color-3: #818181;
+$color-4: #3f3f3f;
+$color-5: #00c7cc;
+
+
+
+%center-all {
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+
+* {
+	color: $color-4;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	background-color: $color-1;
+}
+
 a {
 	text-decoration: none;
 }
@@ -6,19 +30,254 @@ a {
 	position: fixed;
 	width: 100%;
 	top: 0;
-	padding: 15px 0;
+	padding: 10px;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	list-style-type: none;
-	background-color: #fff;
+	background-color: $color-4;
+	z-index: 100;
+
+	.logo {
+		width: 40px;
+		height: auto;
+		border-radius: 40%;
+	}
+
+	.logo-box, .menu-item {
+		@extend %center-all;
+		width: 24%;
+	}
+
+	.logo-box {
+		max-width: 100px;
+	}
+	.menu-item {
+		max-width: 300px;
+	}
+
+	@media only screen and (min-width: 768px) {
+		.menu-item {
+			font-size: 22px;
+		}
+	}
+
+	a {
+		@extend %center-all;
+		color: $color-1;
+		font-weight: 700;
+		width: 100%;
+		height: 100%;
+		background-color: $color-4;
+		&:hover, &[data-active="true"] {
+			background-color: $color-5;
+			outline: none;
+		}
+	}
+
+	.menu-item {
+		background-color: $color-4;
+		&:hover {
+			background-color: $color-5;
+		}
+	}
 }
 
 #main {
-	margin: 50px 15px;
+	margin: 75px 0;
+}
+
+@media only screen and (min-width: 768px) {
+	#main {
+		margin-bottom: 95px;
+	}
+}
+
+.tab-content {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+	.tab-content {
+		margin: 85px auto;
+	}
 }
 
 .about-me {
-	padding-bottom: 30px;
+	
+	.about-me-slider {
+		max-width: 445px;
+		margin: 0 auto 20px;
+
+		.slick-prev:before, .slick-next:before {
+			color: $color-4;
+		}
+	}
+	.about-me-photo {
+		display: block;
+		margin: 10px auto;
+		width: 90%;
+		height: auto;
+		max-width: 450px;
+	}
+	.about-me-paragraph {
+		line-height: 150%;
+		padding: 15px 0;
+	}
+
+	@media only screen and (min-width: 768px) {
+		.about-me-paragraph {
+			font-size: 20px;
+		}
+
+		.about-me-photo {
+			width: 40vw;
+			max-width: 475px;
+			margin: 10px;
+			height: 30vw;
+			max-height: 356px;
+		}
+		.about-me-slider {
+			max-width: 1000px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+	}
+
+}
+
+.offer {
+	.massage-photo {
+		object-fit: contain;
+		width: 138px;
+		height: 138px;
+		max-height: 138px;
+		background-color: $color-1;
+	}
+
+	.offer-info {
+		width: 100%;
+	}
+
+	.offer-title {
+		text-align: center;
+		font-size: 18px;
+		font-weight: 700;
+		margin: 5px 0;
+	}
+
+	.offer-description {
+		padding: 15px;
+	}
+
+	.offer-item {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+	@media only screen and (min-width: 470px) {
+		.offer-item {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+			margin-bottom: 15px;			
+		}
+		.offer-info {
+			width: calc(100% - 138px)
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		.offer-title {
+			font-size: 20px;
+		}
+		.offer-description {
+				font-size: 18px;	
+		}
+	}	
+	.offer-details {
+		@extend %center-all;
+		
+		img {
+			width: 30px;
+			height: 30px;
+		}
+		p:first-of-type, img {
+			margin-right: 12px;
+		}
+	}
+}
+
+.contact {
+	.contact-photo {
+		max-width: 450px;
+		margin: 0 auto 15px;
+		display: block;
+	}
+	.contact-paragraph {
+		margin-bottom: 20px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	.social-icons-container {
+		@extend %center-all;
+
+		a:not(:last-of-type) {
+			margin-right: 20px;
+		}
+	}
+
+
+
+	.contact-icons-container {
+		@extend %center-all;
+		flex-direction: column;
+		margin-bottom: 20px;
+
+		.contact-link {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+			color: $color-4;
+			width: 75%;
+			max-width: 320px;
+			margin-bottom: 15px;
+		}
+		.contact-icon {
+			margin-right: 15px;
+		}
+	}
+
+	.contact-icon {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+	}
+
+	@media only screen and (min-width: 768px) {
+		.contact-icon {
+			width: 60px;
+			height: 60px;
+		}
+
+		.contact-paragraph {
+			font-size: 22px;
+		}
+
+		.contact-icons-container .contact-link {
+			
+			max-width: 380px;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	}
 }
 
 footer {
@@ -27,6 +286,6 @@ footer {
 	justify-content: center;
 	bottom: 0;
 	width: 100%;
-	background-color: #fff;
-	padding: 15px 0;
+	background-color: $color-2;
+	padding: 10px 0;
 }
