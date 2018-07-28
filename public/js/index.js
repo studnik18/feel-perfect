@@ -53,8 +53,9 @@ function toggleActive(event) {
 	if (event.target.getAttribute('data-active') !== 'active') {
 		event.target.setAttribute('data-active', 'true');
 	}
+	window.scrollTo({top: 0});
 }
 
 tabs.forEach(function(tab){
-	tab.addEventListener('click', toggleActive)
+	tab.addEventListener('click', toggleActive);
 });
