@@ -158,7 +158,7 @@ a {
   font-size: 18px; }
 
 .contact .social-icons-container a:not(:last-of-type) {
-  margin-right: 20px; }
+  margin-right: 25px; }
 
 .contact .contact-icons-container {
   flex-direction: column;
