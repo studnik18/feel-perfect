@@ -6,6 +6,8 @@ $( function() {
 		arrows: false,
 		slidesToShow: 1,
 		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
 	  responsive: [
 	    {
 	      breakpoint: 570,
@@ -17,7 +19,6 @@ $( function() {
 	    	breakpoint: 768,
 	    	settings: 'unslick'
 	    }
-
 	  ]
 	}
 	$('.about-me-slider').slick(settings);
